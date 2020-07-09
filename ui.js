@@ -27,7 +27,9 @@ export default class UI {
 
 
     static search(searchText){
-        Ajax.getFromSite(UI.searchURL+ searchText)
+        if (searchText !== ''){
+            Ajax.getFromSite(UI.searchURL+ searchText)
+        }else alert('Search text is empty')
 
     }
 
